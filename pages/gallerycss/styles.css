@@ -91,6 +91,9 @@ body {
     height: 50px;
     border-radius: 50%;
   }
+  .content{
+    font-size: 50px;
+  }
 }
 
 @media (max-width: 425px) {
@@ -344,6 +347,8 @@ body {
   }
 }
 
+
+
 /* Video background styling */
 
 .video-background {
@@ -355,7 +360,7 @@ body {
 @media screen and (max-width: 800px) {
   .video-background{
     position:relative;
-    height: 130px;
+    height: 127px;
     overflow: hidden;
   }
 }
