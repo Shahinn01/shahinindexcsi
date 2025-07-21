@@ -345,12 +345,20 @@ body {
 }
 
 /* Video background styling */
+
 .video-background {
   position: relative;
-  height: 200px;
+  height: 90px;
   overflow: hidden;
 }
 
+@media screen and (max-width: 800px) {
+  .video-background{
+    position:relative;
+    height: 123px;
+    overflow: hidden;
+  }
+}
 .video-background video {
   position: absolute;
   top: 50%;
