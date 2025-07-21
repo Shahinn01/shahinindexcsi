@@ -95,7 +95,7 @@ body {
 
 @media (max-width: 425px) {
   .navbar-brand {
-    gap: 5px;
+    gap: 10px;
   }
 }
 
@@ -112,7 +112,7 @@ body {
 
 /* Navbar links */
 .navbar-nav .nav-link {
-  color: white !important;
+  color: rgb(255, 255, 255) !important;
   font-weight: 500;
   margin-right: 10px;
 }
@@ -355,7 +355,7 @@ body {
 @media screen and (max-width: 800px) {
   .video-background{
     position:relative;
-    height: 125px;
+    height: 127px;
     overflow: hidden;
   }
 }
