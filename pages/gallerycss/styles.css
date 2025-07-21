@@ -355,7 +355,7 @@ body {
 @media screen and (max-width: 800px) {
   .video-background{
     position:relative;
-    height: 127px;
+    height: 130px;
     overflow: hidden;
   }
 }
