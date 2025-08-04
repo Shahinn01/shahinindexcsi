@@ -353,6 +353,57 @@ body {
   }
 }
 
+
+
+
+/* DAILY NOTICE AUTO SCROLL - LOOPING */
+
+.daily-notice-wrapper {
+  height: 30px;
+  overflow: hidden;
+  background: #fefefe;
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-family: 'Noto Sans Tamil', sans-serif;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  background-origin: padding-box, border-box;
+  background-clip: padding-box, border-box;
+  border: 2px solid black;
+  background-color: rgb(205, 228, 255);
+}
+
+.daily-notice-track {
+  display: flex;
+  width: max-content;
+  animation: scrollLoop 40s linear infinite;
+}
+
+.daily-notice-text {
+  white-space: nowrap;
+  color: #6a1b9a;
+  font-size: 14px;
+  font-weight: 600;
+  padding-right: 60px;
+  text-shadow: 0 0 1px rgba(106, 27, 154, 0.15);
+}
+
+/* Continuous Scroll Keyframes */
+@keyframes scrollLoop {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+
+
+
 /* Church History */
 /* 🌟 Enhanced Church History Section */
 .church-history {
@@ -932,63 +983,149 @@ iframe.galleryview {
   z-index: 2;
 }
 
-/* 🔷 Background image */
-.testimonial-section {
-  position: relative;
-  background: url('') no-repeat center center/cover;
-  background-color: grey;
-  padding: 0px 0;
-  margin-top: 20px;
-  color: #fff;
+/* Testimonial */
+ .vaaku-section {
+  font-family: 'Noto Sans Tamil', sans-serif;
+  background: linear-gradient(rgba(255, 190, 130, 0.9), rgba(31, 27, 46, 0.9)), 
+              url('https://cdn.pixabay.com/photo/2015/03/26/10/04/cross-690019_1280.jpg') center/cover no-repeat fixed;
+  background-blend-mode: overlay;
+  padding: 45px 0;
   overflow: hidden;
-  height: 300px;
+  width: 100vw;
 }
 
-.testimonial-section-heading {
-  font-size: 30px;
-  padding-top: 10px;
-}
-
-.testimonial-carousel-inner {
+.vaaku-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 30px;
+  transition: all 0.3s ease-in-out;
   position: relative;
-  z-index: 2;
+  display: inline-block;
 }
 
-.testimonial-card {
-  background: rgba(255, 255, 255, 0.15);
-  border: none;
-  border-radius: 15px;
-  padding: 30px;
-  max-width: 800px;
-  margin: 40px auto;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-  transition: transform 0.1s ease;
-  color: white;
-  font-size: 25px;
+.vaaku-title:hover {
+  color: #ff0000;
+  text-shadow: 0 0 8px #ffffff;
 }
 
-.testimonial-card:hover {
-  transform: scale(1.05);
-}
-
-.testimonial-carousel-indicators button {
-  background-color: #fff;
-}
-
-.testimonial-section h2 {
-  font-weight: 800;
-  margin-bottom: -30px;
-}
-
-.testimonial-section h2::after {
+.vaaku-title::after {
   content: "";
-  width: 80px;
-  height: px;
-  background: #e91e63;
-  display: block;
-  margin: 10px auto 0;
-  border-radius: 2px;
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: #ff2600;
+  bottom: -5px;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
 }
+
+.vaaku-title:hover::after {
+  transform: scaleX(1);
+}
+
+.vaaku-scroll-wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.vaaku-scroll-track {
+  display: flex;
+  gap: 20px;
+  animation: scroll-left 60s linear infinite;
+  width: max-content;
+}
+
+.vaaku-scroll-wrapper:hover .vaaku-scroll-track {
+  animation-play-state: paused;
+}
+
+.vaaku-card {
+  min-width: 300px;
+  background: linear-gradient(145deg, #fefcff, #f6e6ff);
+  border-left: 5px solid #8e24aa;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+  flex-shrink: 0;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.vaaku-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  border-left: 5px solid #d81b60;
+}
+
+.vaaku-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  border: 2px solid transparent;
+  border-image: linear-gradient(45deg, #ff4081, #7c4dff) 1;
+  border-radius: 15px;
+  pointer-events: none;
+  box-shadow: inset 0 0 15px rgba(255, 64, 129, 0.3);
+}
+.vaaku-card:hover {
+  filter: drop-shadow(0 0 10px #ec407a) drop-shadow(0 0 20px #ba68c8);
+}
+
+
+.vaaku-card:hover::before {
+  left: 100%;
+  transition: all 0.7s ease-in-out;
+}
+
+.vaaku-text {
+  font-size: 1.1rem;
+  color: #000000;
+  line-height: 1.6;
+  transition: color 0.3s ease;
+}
+
+.vaaku-text:hover {
+  color: #d81b60;
+  text-shadow: 0 0 5px #e1bee7;
+}
+
+.vaaku-footer {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #6a1b9a;
+  transition: color 0.3s ease;
+}
+
+.vaaku-footer:hover {
+  color: #c2185b;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .vaaku-card {
+    min-width: 250px;
+  }
+
+  .vaaku-title {
+    font-size: 1.8rem;
+  }
+}
+
+
+
 
 .iframe-container-joinus {
   display: flex;
