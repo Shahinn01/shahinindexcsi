@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Veerapanoor Tribal Church Project</title>
+
+  <!-- Bootstrap & Font Awesome -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f9fa;
+      color: #333;
+    }
+
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+        url('https://source.unsplash.com/1600x700/?church,mission') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 120px 20px 80px;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      animation: fadeInDown 1.2s ease-in-out;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      animation: fadeInUp 1.2s ease-in-out;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.2rem;
+      font-weight: 600;
+      margin-bottom: 40px;
+    }
+
+    .project-card {
+      background: white;
+      border-radius: 18px;
+      padding: 30px;
+      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+      transition: transform 0.4s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .icon-box {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+      font-size: 1.1rem;
+    }
+
+    .icon-box i {
+      font-size: 1.5rem;
+      color: #0d6efd;
+      margin-right: 10px;
+    }
+
+    .impact-box {
+      background: linear-gradient(135deg, #e3f2fd, #fff3f3);
+      border-left: 6px solid #0d6efd;
+      border-radius: 16px;
+      padding: 20px;
+      margin-bottom: 20px;
+      transition: background 0.5s ease;
+    }
+
+    .impact-box:hover {
+      background: linear-gradient(135deg, #fff9c4, #fce4ec);
+    }
+
+    .gallery-img {
+      width: 100%;
+      border-radius: 15px;
+      transition: transform 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+      cursor: pointer;
+    }
+
+    .gallery-img:hover {
+      transform: scale(1.04);
+    }
+
+    .scripture {
+      background: #1e293b;
+      color: #f8f9fa;
+      font-style: italic;
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 1.2rem;
+    }
+
+    .why-it-matters {
+      background-color: #e8f0fe;
+      padding: 50px 20px;
+      border-radius: 15px;
+    }
+
+    @keyframes fadeInDown {
+      from {opacity: 0; transform: translateY(-40px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes fadeInUp {
+      from {opacity: 0; transform: translateY(40px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    .donate-section {
+    background: #f8f9fa;
+  }
+  .bank-details p {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+  }
+  .contact-buttons a.btn {
+    font-weight: 600;
+  }
+  .contact-buttons a.btn i {
+    margin-right: 8px;
+  }
+  @media (max-width: 576px) {
+    .contact-buttons {
+      flex-direction: column;
+    }
+    .contact-buttons a.btn {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Veerapanoor Tribal Church Dedication</h1>
+    <p>Empowered by grace. Built with faith. Dedicated to God.</p>
+  </section>
+
+  <!-- Project Overview -->
+  <section class="container py-5">
+    <div class="section-title">Project Overview</div>
+    <div class="project-card" data-aos="fade-up">
+      <h4><i class="fas fa-location-dot text-primary me-2"></i> Veerapanoor, Nilgiri District</h4>
+      <p class="mt-3">
+        Through God’s provision and the faithful offerings of our members, a new house of worship now stands tall among the tribal communities of Veerapanoor. This effort has ignited faith, unity, and revival in a remote area previously untouched by the Gospel.
+      </p>
+      <ul class="list-unstyled mt-4">
+        <li class="icon-box"><i class="fas fa-hand-holding-heart"></i> Total Contribution: ₹30,00,000 (All through member offerings)</li>
+        <li class="icon-box"><i class="fas fa-church"></i> Status: <strong>Church Dedicated Successfully</strong></li>
+        <li class="icon-box"><i class="fas fa-users"></i> Impact: Over 200 tribal families reached</li>
+        <li class="icon-box"><i class="fas fa-cross"></i> Spiritual Significance: First ever Christian worship center in the region</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Why It Matters -->
+  <section class="container mb-5">
+    <div class="section-title">Why This Mission Matters</div>
+    <div class="why-it-matters row align-items-center" data-aos="fade-up">
+      <div class="col-md-6 mb-3">
+        <img src="https://source.unsplash.com/700x450/?tribal,children" class="img-fluid rounded shadow" alt="Tribal Community">
+      </div>
+      <div class="col-md-6">
+        <p>
+          This church stands as more than just a building. It’s a place of hope, education, and transformation. We are witnessing spiritual rebirth, community healing, and the breaking of generational chains. The light of Christ now shines in Veerapanoor!
+        </p>
+        <p>
+          With every prayer meeting and outreach held here, a new generation is being shaped in faith and truth.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="container py-5">
+    <div class="section-title">Dedication Ceremony Gallery</div>
+    <div class="row g-4">
+      <div class="col-sm-6 col-md-4" data-aos="zoom-in"><img src="https://source.unsplash.com/600x400/?church,dedication" class="gallery-img" alt="Dedication 1"></div>
+      <div class="col-sm-6 col-md-4" data-aos="zoom-in"><img src="https://source.unsplash.com/600x400/?worship,congregation" class="gallery-img" alt="Dedication 2"></div>
+      <div class="col-sm-6 col-md-4" data-aos="zoom-in"><img src="https://source.unsplash.com/600x400/?pastor,preaching" class="gallery-img" alt="Dedication 3"></div>
+    </div>
+  </section>
+
+  <!-- Impact Testimonials -->
+  <section class="container py-5">
+    <div class="section-title">Kingdom Impact</div>
+    <div class="row">
+      <div class="col-md-6" data-aos="fade-right">
+        <div class="impact-box">
+          <h5>💬 Local Testimony</h5>
+          <p>“We never imagined worshipping in our own church. Today, because of this initiative, our village has seen hope, unity, and the presence of God.”</p>
+        </div>
+      </div>
+      <div class="col-md-6" data-aos="fade-left">
+        <div class="impact-box">
+          <h5>🎉 Blessing & Outreach</h5>
+          <p>The church has already hosted prayer gatherings, youth meetings, and fellowship events that are changing lives and connecting hearts.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="donate" class="donate-section py-5 text-center bg-light">
+  <div class="container">
+    <h2 class="mb-4" style="color: #2c3e50; font-weight: 700;">Support Our Mission</h2>
+    <p class="lead mb-4" style="max-width: 600px; margin: auto; color: #34495e;">
+      Your generous support helps us continue our work and outreach.<br/>
+      You can donate by direct bank transfer or instantly via UPI/Google Pay.
+    </p>
+
+    <div class="bank-details mb-4 p-4 bg-white rounded shadow-sm mx-auto" style="max-width: 400px; color: #2c3e50; text-align: left;">
+      <h5 class="mb-3">Bank Account Details (INR)</h5>
+      <p><strong>Account Name:</strong> CSI Pastorate Church Mangarai</p>
+      <p><strong>Account Number:</strong> 123456789012</p>
+      <p><strong>Bank Name:</strong> State Bank of India</p>
+      <p><strong>IFSC Code:</strong> SBIN0001234</p>
+      <p><strong>Branch:</strong> Mangarai</p>
+    </div>
+
+    <!-- UPI Payment Button -->
+    <div class="upi-payment mb-4">
+      <h5 class="mb-3" style="color: #2c3e50;">Instant Payment via UPI / Google Pay</h5>
+      
+      <a 
+        href="upi://pay?pa=your-vpa@bank&pn=CSI%20Pastorate%20Church%20Mangarai&am=&cu=INR&tn=Donation%20to%20CSI%20Pastorate%20Church" 
+        class="btn btn-success btn-lg" 
+        style="min-width: 220px;"
+        target="_blank"
+        rel="noopener"
+        aria-label="Pay via UPI or Google Pay"
+      >
+        <i class="fas fa-mobile-alt" style="margin-right: 8px;"></i> Pay with UPI / GPay
+      </a>
+      
+      <p class="mt-2 text-muted" style="font-size: 0.9rem;">
+        Tap the button to open your UPI app and pay instantly.  
+        Enter the amount and confirm payment.
+      </p>
+    </div>
+
+    <p class="mb-3" style="color: #34495e;">
+      After payment, please notify us via WhatsApp or email to help us acknowledge your gift.
+    </p>
+
+    <div class="contact-buttons d-flex justify-content-center gap-3 flex-wrap">
+      <a href="https://wa.me/919876543210?text=I%20have%20donated%20to%20CSI%20Pastorate%20Church%20Mangarai%20-%20Name:%20%5BYour%20Name%5D%20Amount:%20%5BAmount%5D" 
+         target="_blank" class="btn btn-success" style="min-width:180px;">
+        <i class="fab fa-whatsapp"></i> Notify via WhatsApp
+      </a>
+      <a href="mailto:donations@csipastorate.org?subject=Donation%20Notification&body=Dear%20Team,%0A%0AI%20have%20donated%20to%20CSI%20Pastorate%20Church%20Mangarai.%0AName:%20%0AAmount:%20%0A%0AThank%20you." 
+         class="btn btn-primary" style="min-width:180px;">
+        <i class="fas fa-envelope"></i> Notify via Email
+      </a>
+    </div>
+  </div>
+</section>
+
+  <!-- Scripture Footer -->
+  <div class="scripture">
+    “Unless the Lord builds the house, the builders labor in vain.” – Psalm 127:1
+  </div>
+
+  <!-- JS: Bootstrap + AOS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init({ duration: 1000 });</script>
+
+</body>
+</html>
